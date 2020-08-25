@@ -35,7 +35,7 @@ app.post("/add", (req, res) => {
   } else {
     data = {
       status: req.body.statusCode !== 404 ? "Successful" : "Failed",
-      message: "The sum of given two numbers",
+      message: "the sum of given two numbers",
       sum: sum,
     };
   }
@@ -52,13 +52,13 @@ app.post("/sub", (req, res) => {
     diff = num1 - num2;
   }
   if (diff < -1000000) {
-    data = { status: "error", message: "underflow" };
+    data = { status: "error", message: "Underflow" };
   } else if (typeof num1 === "string" || typeof num2 === "string") {
     data = { status: "error", message: "invalid data types" };
   } else {
     data = {
       status: req.body.statusCode !== 404 ? "Successful" : "Failed",
-      message: "The difference of given two numbers",
+      message: "the substract of given two numbers",
       sum: diff,
     };
   }
@@ -86,7 +86,7 @@ app.post("/multiply", (req, res) => {
   } else {
     data = {
       status: req.body.statusCode !== 404 ? "Successful" : "Failed",
-      message: "The product of given two numbers",
+      message: "the product of given two numbers",
       sum: product,
     };
   }
@@ -94,7 +94,7 @@ app.post("/multiply", (req, res) => {
   return res.send(data);
 });
 
-app.post("/divide", (req, res) => {
+app.post("/division", (req, res) => {
   const num1 = req.body.num1;
   const num2 = req.body.num2;
   let div;
@@ -114,7 +114,7 @@ app.post("/divide", (req, res) => {
   } else {
     data = {
       status: req.body.statusCode !== 404 ? "Successful" : "Failed",
-      message: "The division of given two numbers",
+      message: "the division of given numbers",
       sum: div,
     };
   }
