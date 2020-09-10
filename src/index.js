@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.send("Hello World!");
 });
 
 app.post("/add", (req, res) => {
@@ -35,7 +35,7 @@ app.post("/add", (req, res) => {
   } else {
     data = {
       status: req.body.statusCode !== 404 ? "Successful" : "Failed",
-      message: "the sum of given two numbers",
+      message: "the sum of given two number",
       sum: sum,
     };
   }
@@ -58,7 +58,7 @@ app.post("/sub", (req, res) => {
   } else {
     data = {
       status: req.body.statusCode !== 404 ? "Successful" : "Failed",
-      message: "the substract of given two numbers",
+      message: "the difference of given two number",
       sum: diff,
     };
   }
@@ -86,7 +86,7 @@ app.post("/multiply", (req, res) => {
   } else {
     data = {
       status: req.body.statusCode !== 404 ? "Successful" : "Failed",
-      message: "the product of given two numbers",
+      message: "The product of given numbers",
       sum: product,
     };
   }
